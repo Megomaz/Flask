@@ -2,6 +2,15 @@
 {% block title %} Login Page {% endblock %}
 
 {% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
 <form action ="#" method="post">   {# '#' means stay in the same url #}
     <p> Name: </p>
     <p><input type="text" name="nm"/> </p>
