@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Welcome to my Home Page! </h1>
+    <p>This is a simple HTML page.</p>
+    <p>{{content}}</p>
+    <p>{{number}}</p>
+    {% for _ in range(10) %}
+        {% if loop.index % 2 == 0 %}
+            <p>Even number: {{ loop.index }}</p>
+        {% else %}
+            <p>Odd number: {{ loop.index }}</p>
+        {% endif %}
+    {% endfor %}
+    {% for name in arr%}
+        <p>{{ name }}</p>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!-- templates/template.html -->
+
+{% extends "base.html" %}
+<!-- This tells Flask: use 'base.html' as the layout -->
+
+{% block title %}
+Home Page
+<!-- This will replace the <title> block in base.html -->
+{% endblock %}
+
+{% block content %}
+<h2>This is a test page.</h2>
+<p>Welcome to the site!</p>
+<!-- This replaces the content block in base.html -->
+{% endblock %}
